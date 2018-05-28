@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" >
+   <center>
+      <HBox prefHeight="530.0" prefWidth="434.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView prefHeight="530.0" prefWidth="131.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="129.0" text="C1" />
+              </columns>
+               <HBox.margin>
+                  <Insets bottom="20.0" />
+               </HBox.margin>
+            </TableView>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" text="&lt;">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="&gt;" />
+               </children>
+            </VBox>
+            <TableView prefHeight="530.0" prefWidth="136.0">
+              <columns>
+                <TableColumn prefWidth="135.0" text="C1" />
+              </columns>
+               <HBox.margin>
+                  <Insets bottom="20.0" />
+               </HBox.margin>
+            </TableView>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <right>
+      <GridPane prefHeight="512.0" prefWidth="227.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="152.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="4.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="437.0" minHeight="0.0" prefHeight="126.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Report Name :" />
+            <Label text="Begin Date :" GridPane.rowIndex="2" />
+            <Label text="End Date :" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="1" />
+            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Report Type :" GridPane.rowIndex="1" />
+            <ComboBox prefWidth="150.0" promptText="Custom Report" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Chart Type :" GridPane.rowIndex="4" />
+            <RadioButton mnemonicParsing="false" selected="true" text="Line Chart" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Chart_Type" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Bar Chart" toggleGroup="$Chart_Type" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <RadioButton mnemonicParsing="false" text="Pie Chart" toggleGroup="$Chart_Type" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </right>
+</BorderPane>

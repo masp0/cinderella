@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ResourceController">
+                     <children>
+                        <BorderPane layoutX="-1.0" layoutY="18.0" prefHeight="753.0" prefWidth="1218.0">
+                           <center>
+                              <TableView fx:id="tableview" prefHeight="661.0" prefWidth="1178.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn fx:id="resCol" editable="false" minWidth="75.0" prefWidth="100.0" text="Resource_ID" />
+                                  <TableColumn fx:id="stockCol" minWidth="75.0" prefWidth="100.0" text="Stock" />
+                                    <TableColumn fx:id="mstockCol" minWidth="75.0" prefWidth="100.0" text="Min_Stock" />
+                                    <TableColumn fx:id="noteCol" minWidth="75.0" prefWidth="100.0" text="Note" />
+                                </columns>
+                                 <BorderPane.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </BorderPane.margin>
+                              </TableView>
+                           </center>
+                           <top>
+                              <HBox prefHeight="45.0" prefWidth="1169.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="TF1" promptText="Resource Name ...">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <ComboBox fx:id="CBox1" prefHeight="25.0" prefWidth="149.0" promptText="Res_ID">
+                    				 <HBox.margin>
+                       				   <Insets left="10.0" />
+                   				     </HBox.margin></ComboBox>
+                                    <Button fx:id="searchButton" mnemonicParsing="false" text="Search">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </top>
+                           <bottom>
+                              <HBox prefHeight="54.0" prefWidth="1218.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Button fx:id="saveButton" mnemonicParsing="false" text="Save Data">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="addButton" mnemonicParsing="false" text="Add Resource">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete Resource">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+
